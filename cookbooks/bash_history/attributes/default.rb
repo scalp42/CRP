@@ -1,0 +1,1 @@
+default['bash_history']['format']="\'%F %T \'"

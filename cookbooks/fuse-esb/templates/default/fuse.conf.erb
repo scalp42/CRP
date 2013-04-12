@@ -1,0 +1,16 @@
+# <%= node['fuse-esb']['service_name'] %> - Upstart job to start FuseESB on specified levels
+#
+
+description     "FuseESB daemon"
+author          "Sergii Golovatiuk <sergii_golovatiuk@epam.com>"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+kill timeout 30
+respawn
+
+script
+  /opt/fuse-esb/bin/karaf server
+  emit fuse_running
+end script

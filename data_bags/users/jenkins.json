@@ -1,0 +1,7 @@
+{
+  "id": "jenkins",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCKTFEpsUBSm2SnVc3TAHwZx/uAA3Swt1zDDiSO8B5LOeS9/IV3N91kOFKeBri+vldhJXm2MxucmUk3d7l2ztB2rcERsK4nZrCcvvVvClcmjkudzOHht3i57iz11479zTAqb4pYlFLno0mu3tlFF7/wVuXtlI6J6Dt2Hvz5FPN8pAKx8ZyVtsvqW8ftDAKrQ6KzklsjnxXgPHnNWhkQDbWyEMsmxonQsIMAixBeab6fX1bg4+2L6DMNpQBuA4gCJxJLM7yOgowMPRdbFYrhEcm6siq/I0UwnBog/l0AnyVyTYJwJSzXMr/aS69B6embJIW/NxoXmXspffvBwpygMfRf jenkins-key",
+  "groups": [ "sysadmin" ],
+  "home": "\/var\/lib\/jenkins",
+  "shell": "\/bin\/bash"
+}

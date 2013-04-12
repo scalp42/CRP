@@ -1,0 +1,19 @@
+.vagrant
+Berksfile.lock
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+fuse_deploy.sh
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+#Berksfile
+Berksfile.lock
+
+compiled_cookbooks/*
