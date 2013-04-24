@@ -13,15 +13,15 @@ mysql_connection_info = {:host => "localhost",
                          :username => 'root',
                          :password => node['mysql']['server_root_password']}
 
-mysql_database 'vg_crp' do
+mysql_database node['fuse_database']['name'] do
   connection mysql_connection_info
   action :create
 end
 
-mysql_database_user 'vg_crp' do
+mysql_database_user node['fuse_database']['user'] do
   connection mysql_connection_info
-  password 'super_secret'
-  database_name 'vg_crp'
+  password node['fuse_database']['password']
+  database_name node['fuse_database']['name']
   host '%'
   privileges [:all]
   action :grant

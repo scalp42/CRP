@@ -31,18 +31,7 @@ Vagrant.configure("2") do |config|
       chef.cookbooks_path = "compiled_cookbooks"
       chef.data_bags_path = "data_bags"
       chef.roles_path = "roles"
-      chef.add_role "base" 
-      chef.json = {
-        :mysql => {
-          :bind_address => "0.0.0.0",
-          :server_root_password => "PASSWORD",
-          :server_repl_password => "PASSWORD",
-          :server_debian_password => "PASSWORD"
-        }
-      }
-      chef.add_recipe "mysql::server"
-      chef.add_recipe "fuse_database"
-      chef.add_recipe "tomcat_database"
+      chef.add_role "mysql" 
     end
   end
 
@@ -95,7 +84,11 @@ Vagrant.configure("2") do |config|
         #   :checksum => "942fe1ff45a790265130dcde5ca6627f56f99c8b1efee51b30d44967dae3e91b"
         # },
         :maven => {
-          :version => "3"
+          :version => "3",
+           :"3" => {
+             :url => "http://apache.mirrors.tds.net/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz", 
+             :checksum => "d98d766be9254222920c1d541efd466ae6502b82a39166c90d65ffd7ea357dd9",
+           }
         }
       }
 
@@ -155,11 +148,11 @@ Vagrant.configure("2") do |config|
           :install_method => "source"
         },
         :maven => {
-          :version => "3"
-          # :3 => {
-          #   :url => "http://apache.mirrors.tds.net/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.tar.gz", 
-          #   :checksum => ""
-          # }
+          :version => "3",
+           :"3" => {
+             :url => "http://apache.mirrors.tds.net/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz", 
+             :checksum => "d98d766be9254222920c1d541efd466ae6502b82a39166c90d65ffd7ea357dd9"
+           }
         }
       }
       chef.add_recipe "java"

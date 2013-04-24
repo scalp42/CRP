@@ -13,15 +13,15 @@ mysql_connection_info = {:host => "localhost",
                          :username => 'root',
                          :password => node['mysql']['server_root_password']}
 
-mysql_database 'vg_crp_location' do
+mysql_database node['tomcat_database']['name'] do
   connection mysql_connection_info
   action :create
 end
 
-mysql_database_user 'vg_crp_location' do
+mysql_database_user node['tomcat_database']['user'] do
   connection mysql_connection_info
-  password 'super_secret'
-  database_name 'vg_crp_location'
+  password node['tomcat_database']['password']
+  database_name node['tomcat_database']['name']
   host '%'
   privileges [:all]
   action :grant
