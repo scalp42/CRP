@@ -41,3 +41,5 @@ cookbook 'maven'
 cookbook 'fuse-esb', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/fuse-esb"
 
 cookbook 'subversion'
+
+cookbook 'tomcat7, git: 'https://github.com/holser/CRP.git', rel: "cookbooks/tomcat7"

@@ -1,0 +1,25 @@
+{
+  "name": "mysql",
+  "description": "MySQL Server and Databases for project",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+    "mysql": {
+      "bind_address": "0.0.0.0",
+      "server_root_password": "PASSWORD",
+      "server_repl_password": "PASSWORD",
+      "server_debian_password": "PASSWORD"
+    }
+   },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[mysql::server]",
+    "recipe[fuse_database]",
+    "recipe[tomcat_database]",
+    "recipe[nuxeo_database]"
+  ],
+  "env_run_lists": {
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "tomcat",
+  "description": "TomcatServer",
+  "json_class": "Chef::Role",
+  "defaults":{},
+  "overrides":{
+    "java":{
+      "install_flavor":"oracle",
+      "jdk_version":"6",
+      "oracle":{
+        "accept_oracle_download_terms":true
+      }
+    },
+    "ant":{
+      "version":"1.9.0",
+      "checksum":"d79dd4961a508d41618c98c3f1871d6c1eb1372f70b79439ba9c0e8c3ddc7e5f",
+      "install_method":"source"
+    },
+    "maven":{
+      "version":"3",
+      "3":{
+        "url":"http://apache.mirrors.tds.net/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz",
+        "checksum":"d98d766be9254222920c1d541efd466ae6502b82a39166c90d65ffd7ea357dd9"
+      }
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[base]",
+    "recipe[java]",
+    "recipe[ant]",
+    "recipe[maven]",
+    "recipe[subversion::client]",
+    "recipe[tomcat7]"
+  ],
+  "env_run_lists": {
+  }
+}
