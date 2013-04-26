@@ -1,10 +1,10 @@
-# CHANGELOG for tomcat_database
+# CHANGELOG for nuxeo_database
 
 This file is used to list changes made in each version of tomcat_database.
 
 ## 0.1.0:
 
-* Initial release of tomcat_database
+* Initial release of nuxeo_database
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

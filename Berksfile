@@ -42,4 +42,6 @@ cookbook 'fuse-esb', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/f
 
 cookbook 'subversion'
 
-cookbook 'tomcat7, git: 'https://github.com/holser/CRP.git', rel: "cookbooks/tomcat7"
+cookbook 'nuxeo_database', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/nuxeo_database"
+
+cookbook 'tomcat7', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/tomcat7"
