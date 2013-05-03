@@ -9,6 +9,19 @@
 include_recipe "java"
 include_recipe "ark"
 
+group node['fuse-esb']['group'] do
+	action :create
+end
+
+user node['fuse-esb']['user'] do
+	comment "FuseESB Service User"
+	gid node['fuse-esb']['group']
+	home node['fuse-esb']['home']
+	shell "/bin/false"
+	system true
+	action :create
+end
+
 ark "fuse-esb" do
 	url node['fuse-esb']['url']
 	prefix_root node['fuse-esb']['prefix_root'] 

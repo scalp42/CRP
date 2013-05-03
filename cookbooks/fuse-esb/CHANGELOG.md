@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of fuse-esb.
 
+## 0.1.6:
+
+* Added fuse user. Added memory settings to Upstart script
+
 ## 0.1.5:
 
 * Adding Upstart script linking to /etc/init.d
