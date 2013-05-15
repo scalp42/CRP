@@ -35,30 +35,30 @@ Vagrant.configure("2") do |config|
     end
   end
 
-  config.vm.define :tomcat_server do |tomcat_server|
-    tomcat_server.vm.provider :virtualbox do |vb|
+#  config.vm.define :tomcat_server do |tomcat_server|
+#    tomcat_server.vm.provider :virtualbox do |vb|
       # vb.gui = true
-      vb.customize [
-        'modifyvm', :id,
-        '--name', "Tomcat Server",
-        '--cpus', 1,
-        '--memory', 768,
-        '--nictype1', 'virtio',
-        '--nictype2', 'virtio'
-      ]
-    end
-    tomcat_server.vm.box = "ubuntu12.04.2"
-    tomcat_server.vm.box_url = "http://d1owbwdg5aiwzw.cloudfront.net/ubuntu12.04.2.box"
-    tomcat_server.vm.hostname = "tomcat"
-    tomcat_server.vm.network :private_network, ip: "192.168.33.11"
-    tomcat_server.vm.network :forwarded_port, guest: 8080, host: 8080, auto_correct: true
-    tomcat_server.vm.provision :chef_solo do |chef|
-      chef.cookbooks_path = "compiled_cookbooks"
-      chef.data_bags_path = "data_bags"
-      chef.roles_path = "roles"
-      chef.add_role "tomcat"
-    end
-  end
+#      vb.customize [
+#        'modifyvm', :id,
+#        '--name', "Tomcat Server",
+#        '--cpus', 1,
+#        '--memory', 768,
+#        '--nictype1', 'virtio',
+#        '--nictype2', 'virtio'
+#      ]
+#    end
+#    tomcat_server.vm.box = "ubuntu12.04.2"
+#    tomcat_server.vm.box_url = "http://d1owbwdg5aiwzw.cloudfront.net/ubuntu12.04.2.box"
+#    tomcat_server.vm.hostname = "tomcat"
+#    tomcat_server.vm.network :private_network, ip: "192.168.33.11"
+#    tomcat_server.vm.network :forwarded_port, guest: 8080, host: 8080, auto_correct: true
+#    tomcat_server.vm.provision :chef_solo do |chef|
+#      chef.cookbooks_path = "compiled_cookbooks"
+#      chef.data_bags_path = "data_bags"
+#      chef.roles_path = "roles"
+#      chef.add_role "tomcat"
+#    end
+#  end
 
   config.vm.define :fuse_server do |fuse_server|
     fuse_server.vm.provider :virtualbox do |vb|
