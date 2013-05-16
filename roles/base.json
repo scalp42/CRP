@@ -47,6 +47,14 @@
         "passwordless": true,
         "sudoers_defaults": [ "!lecture,tty_tickets,!fqdn,!requiretty" ]
       }
+    },
+    "postfix": {
+      "myhostname": "dev-startcrp.net",
+      "relayhost": "email-smtp.us-east-1.amazonaws.com:25",
+      "smtp_sasl_auth_enable": "yes",
+      "smtp_tls_cafile": "/etc/ssl/certs/ca-certificates.crt",
+      "smtp_sasl_user_name": "AMAZON_SES_USER",
+      "smtp_sasl_passwd": "AMAZON_SES_PASSWORD"
     }
   },
   "chef_type": "role",
@@ -63,7 +71,9 @@
     "recipe[chef-solo-search]",
     "recipe[users::sysadmins]",
     "recipe[sudo]",
-    "recipe[screen]"
+    "recipe[screen]",
+    "recipe[postfix]",
+    "recipe[postfix::sasl_auth]"
   ],
   "env_run_lists": {
   }
