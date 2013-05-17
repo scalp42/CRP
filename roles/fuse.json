@@ -29,7 +29,7 @@
   "run_list": [
     "role[base]",
     "recipe[subversion::client]",
-    "recipe[mysql::client],
+    "recipe[mysql::client]",
     "recipe[java]",
     "recipe[ant]",
     "recipe[maven]",

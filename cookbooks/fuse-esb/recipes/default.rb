@@ -31,6 +31,11 @@ ark "fuse-esb" do
 	action :install
 end
 
+template "/etc/profile.d/fuse_home.sh" do
+  mode 0755
+  source "fuse_home.sh.erb"
+end
+
 if node['fuse-esb']['use_upstart'] 
 	template "/etc/init/#{node['fuse-esb']['service_name']}.conf" do
 		mode 0644

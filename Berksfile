@@ -24,7 +24,7 @@ cookbook 'java'
 
 cookbook 'fuse_database', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/fuse_database"
 
-cookbook 'tomcat_database', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/tomcat_database"
+#cookbook 'tomcat_database', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/tomcat_database"
 
 cookbook 'apparmor'
 
@@ -44,6 +44,6 @@ cookbook 'subversion'
 
 cookbook 'nuxeo_database', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/nuxeo_database"
 
-cookbook 'tomcat7', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/tomcat7"
+#cookbook 'tomcat7', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/tomcat7"
 
 cookbook 'postfix'
