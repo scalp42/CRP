@@ -47,3 +47,7 @@ cookbook 'nuxeo_database', git: 'https://github.com/holser/CRP.git', rel: "cookb
 #cookbook 'tomcat7', git: 'https://github.com/holser/CRP.git', rel: "cookbooks/tomcat7"
 
 cookbook 'postfix'
+
+cookbook 'nginx'
+
+cookbook 'application_nginx'

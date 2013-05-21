@@ -17,7 +17,6 @@
     "role[base]",
     "recipe[mysql::server]",
     "recipe[fuse_database]",
-    "recipe[tomcat_database]",
     "recipe[nuxeo_database]"
   ],
   "env_run_lists": {
