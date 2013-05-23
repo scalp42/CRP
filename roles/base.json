@@ -45,7 +45,7 @@
       "sudo": {
         "agent_forwarding": true,
         "passwordless": true,
-        "sudoers_defaults": [ "!lecture,tty_tickets,!fqdn,!requiretty" ]
+        "sudoers_defaults": [ "!lecture,tty_tickets,!fqdn,!requiretty", "env_keep+=HISTTIMEFORMAT" ]
       }
     },
     "postfix": {
