@@ -16,6 +16,9 @@
       "version":"1.9.0",
       "checksum":"d79dd4961a508d41618c98c3f1871d6c1eb1372f70b79439ba9c0e8c3ddc7e5f",
       "install_method":"source"
+    },
+    "maven":{
+      "version": 3
     }
   },
   "chef_type": "role",
