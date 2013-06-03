@@ -9,7 +9,7 @@
       "install_flavor":"oracle",
       "jdk_version":"6",
       "oracle":{
-        "accept_oracle_download_terms":true
+        "accept_oracle_download_terms": true
       }
     },
     "ant":{
@@ -19,6 +19,10 @@
     },
     "maven":{
       "version": 3
+    },
+    "nginx":{
+      "worker_connections": 4096,
+      "default_site_enabled": false 
     }
   },
   "chef_type": "role",
@@ -26,10 +30,13 @@
     "role[base]",
     "recipe[subversion::client]",
     "recipe[mysql::client]",
+    "recipe[ssl]",
+    "recipe[nginx]",
+    "recipe[crp-command-centre-ui]",
     "recipe[java]",
     "recipe[ant]",
     "recipe[maven]",
-    "recipe[fuse-esb]"   
+    "recipe[fuse-esb]"
   ],
   "env_run_lists": {
   }

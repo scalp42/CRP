@@ -76,6 +76,7 @@ Vagrant.configure("2") do |config|
     fuse_server.vm.box_url = "http://d1owbwdg5aiwzw.cloudfront.net/ubuntu12.04.2.box"
     fuse_server.vm.hostname = "fuse"
     fuse_server.vm.network :private_network, ip: "192.168.33.10"
+    fuse_server.vm.network :forwarded_port, guest: 80, host: 8000, auto_correct: true
     fuse_server.vm.network :forwarded_port, guest: 8181, host: 8181, auto_correct: true
     fuse_server.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "compiled_cookbooks"
