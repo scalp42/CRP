@@ -12,13 +12,17 @@ server {
         ssl_session_cache shared:SSL:10m;
         ssl_prefer_server_ciphers on;
 
-        ssl_certificate /etc/ssl/private/wildcard.dev-startcrp.net.crt;
+        ssl_certificate /etc/ssl/certs/wildcard.dev-startcrp.net.combined.crt;
         ssl_certificate_key /etc/ssl/private/wildcard.dev-startcrp.net.key;
 
         error_log <%= node['nginx']['log_dir'] %>/<%= node['crp-command-centre-ui']['web_domain'] %>.log;
         access_log <%= node['nginx']['log_dir'] %>/<%= node['crp-command-centre-ui']['web_domain'] %>.log;
 
         location / {
+                rewrite  ^/(.*)$ $scheme://$server_name/command-centre/login/auth break;
+        }
+
+        location /command-centre {
                 proxy_pass http://<%= node['crp-command-centre-ui']['web_host'] %>:<%= node['crp-command-centre-ui']['web_port'] %>;
 
                 client_max_body_size 10M;
