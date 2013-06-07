@@ -1,0 +1,1 @@
+default['login_defs']['umask'] = "077"
