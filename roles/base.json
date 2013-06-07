@@ -59,6 +59,7 @@
   },
   "chef_type": "role",
   "run_list": [
+    "recipe[login_defs]",
     "recipe[apt]",
     "recipe[locale]",
     "recipe[apparmor]",
