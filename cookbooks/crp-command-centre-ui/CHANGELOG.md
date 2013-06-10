@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of history.
 
+## 0.1.1:
+
+* Added section for location services
+
 ## 0.1.0:
 
 * Initial release of crp-command-centre-ui
