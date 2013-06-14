@@ -31,7 +31,7 @@
     "recipe[subversion::client]",
     "recipe[mysql::client]",
     "recipe[ssl]",
-    "recipe[nginx-repo]",
+    "recipe[nginx::repo]",
     "recipe[nginx]",
     "recipe[crp-command-centre-ui]",
     "recipe[java]",

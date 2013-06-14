@@ -1,8 +1,8 @@
 #
 # Cookbook Name:: openssh
-# Recipe:: config
+# Recipe:: iptables
 #
-# Copyright 2008-2009, Opscode, Inc.
+# Copyright 2013, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,5 +17,6 @@
 # limitations under the License.
 #
 
-default['openssh']['client_alive_interval'] = "900"
-default['openssh']['client_alive_count_max'] = "0"
+include_recipe "iptables"
+
+iptables_rule "port_ssh"
