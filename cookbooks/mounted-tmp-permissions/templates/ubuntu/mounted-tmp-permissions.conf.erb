@@ -1,0 +1,15 @@
+# mounted-tmp-permissions
+#
+#
+#
+
+description     "Set proper permissions on /tmp directory"
+
+start on (mounted MOUNTPOINT=/tmp)
+env MOUNTPOINT=/tmp
+
+task
+
+script
+    chmod <%= @mode %> /tmp
+end script
