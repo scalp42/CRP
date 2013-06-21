@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of fuse-esb.
 
+## 0.1.8:
+
+### Improvement
+
+- Fixing foodcritic warnings
+
 ## 0.1.7:
 
 * Added KARAF_HOME Environemnt variable

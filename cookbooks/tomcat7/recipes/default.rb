@@ -47,7 +47,7 @@ if node['tomcat7']['use_upstart']
 	end
 end
 
-service "#{node['tomcat7']['service_name']}" do
+service "node['tomcat7']['service_name']" do
 	service_name node['tomcat7']['service_name']
  	if node['tomcat7']['use_upstart']
  		provider Chef::Provider::Service::Upstart

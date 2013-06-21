@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of mounted-tmp-permissions.
 
+## 0.1.1:
+
+### Improvement
+
+- Fixing foodcritic warning
+
 ## 0.1.0:
 
 * Initial release of mounted-tmp-permissions

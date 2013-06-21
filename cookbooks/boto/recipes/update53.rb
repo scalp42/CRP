@@ -8,9 +8,8 @@ template "/etc/init.d/update53" do
   group "root"
 end
 
-unless Chef::Config[:solo]
-  service "update53" do
-    supports :start => true, :stop => true
-    action [ :enable, :start]
-  end
+service "update53" do
+  supports :start => true, :stop => true
+  action [ :enable, :start]
+  not_if { Chef::Config[:solo] }
 end
